@@ -13,13 +13,13 @@ export default function Feedback() {
 
     const onLeaveFeedback = event => {
         switch (event.target.name) {
-            case "good":
+            case "Good":
               setGood((prevState) => prevState + 1);
               break;
-            case "neutral":
+            case "Neutral":
               setNeutral((prevState) => prevState + 1);
               break;
-            case "bad":
+            case "Bad":
               setBad((prevState) => prevState + 1);
               break;
       
@@ -41,7 +41,7 @@ export default function Feedback() {
 
     <Section title={'Plese leave feedback'}>
         <FeedbackOptions 
-            options={["good", "neutral", "bad"]}
+            options={["Good", "Neutral", "Bad"]}
             onLeaveFeedback={onLeaveFeedback} />
     </Section>
     <Section  title={'Statistics'}>
